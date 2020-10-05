@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			@media screen and (min-width: 1280px) {
+				.bg{
+					width: 800px;
+					height: 2000px;
+				}
+			}
+			.bg{
+				background-color: #FFFFFF;
+				width: 90%;
+				height: 1300px;
+				margin: 5% 5%;
+				box-shadow: 0 0 150px #EEEEEE;
+			}
+			.img{
+				width: 90%;
+				border-radius: 10px;
+			}
+			.img img{
+				width: 90%;
+				margin: auto 10%;
+				margin-top: 12%;
+				margin-bottom: 6%;
+				border-radius: 30px;
+			}
+			.music_word{
+				font-size: 30px;
+				margin-left: 10%;
+			}
+			.timer{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 35px;
+				font-weight: bold;
+				margin-top: 10%;
+				/* background-color: #1FCD9C; */
+				/* height: 50px;
+				width: 90%; */
+			}
+			.heart img{
+				height: 40px;
+				width: 40px;
+				margin-top: 4%;
+				margin-right: 4%;
+				float: right;
+			}
+			.btn{
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				flex-direction: row;
+				width: 60%;
+				margin: 10% 20%;
+			}
+			.btn img{
+				height: 40px;
+				width: 40px;
+
+			}
+			#EleId{
+				display: none;
+			}
+			.pop{
+				background-color: #FFFFFF;
+				width: 680px;
+				height: 350px;
+				position: absolute;
+				top: 200px;
+				left: 15%;
+				right:10%;
+			}
+			.content{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: row;
+				font-size: 30px;
+				margin-top: 30px;
+
+			}
+			.content input{
+				width: 100px;
+				height: 50px;
+				border: 1px solid #EEEEEE;
+				border-radius: 5px;
+				font-size: 30px;
+			}
+			.confirm{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 50px;
+			}
+			.confirm button{
+				height: 70px;
+				width: 150px;
+				font-size: 30px;
+				background-color: #1fcd9c;
+				border: none;
+				border-radius: 10px;
+				color: #FFFFFF;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="bg">
+			<div class="heart"><img onClick="popup()" src="/media/img/heart.png"/></div>
+			<div class="img">
+				<img src="/media/img/img1.jpg"/>
+			</div>
+			<div class="music_word">词：荒木</div>
+			<div class="timer" id="show">
+				<!-- 倒计时 -->
+			</div>
+			<div class="btn">
+				<audio id="music1" src="/media/music/我们的天空.mp3" loop autoplay></audio>
+				<audio id="music2" src="/media/music/留下句号的面容.mp3" loop autoplay></audio>
+				<img src="/media/img/stop.png" onClick="play1()" />
+				<img src="/media/img/start.png" onClick="play2()" />
+			</div>
+
+
+			<div id="EleId">
+				<div class="pop">
+					<div style="margin-top: 30px;margin-left: 30px;font-size: 35px">请输入倒计时时间:</div>
+					<div class="content">
+<!--						<input type="text" id="newhours" maxlength="2">-->
+<!--						<span>时</span>-->
+<!--						<input type="text" id="newminutes" maxlength="2">-->
+						<input type="text" class="form-control" name="Minute" id="Minute">
+						<span>分</span>
+<!--						<input type="text" id="newseconds" maxlength="2">-->
+						<input type="text" class="form-control" name="Second" id="Second">
+						<span>秒</span>
+					</div>
+					<div class="confirm">
+<!--						<button onclick="close1()" id="btn1">确定</button>-->
+						<button onclick="ok()" id="btn1">确定</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+	</body>
+
+	<script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
+	<script>
+		var audio1 = document.getElementById('music1');
+		var audio2 = document.getElementById('music2');
+
+		window.onload = function(){
+			var date = new Date();
+			var year = date.getFullYear(); //获取当前年份
+			var mon = date.getMonth() + 1; //获取当前月份
+			var da = date.getDate(); //获取当前日
+			var day = date.getDay(); //获取当前星期几
+			var h = date.getHours(); //获取小时
+			var m = date.getMinutes(); //获取分钟
+			var s = date.getSeconds(); //获取秒
+			var d = document.getElementById('show');
+			//判断当数字小于等于9时 显示 01 02 ----- 08 09
+			if (mon >= 1 && mon <= 9) {
+				mon = "0" + mon;
+			}
+			if (da >= 0 && da <= 9) {
+				da = "0" + da;
+			}
+			if (h >= 0 && h <= 9) {
+				h = "0" + h;
+			}
+
+			if (m >= 0 && m <= 9) {
+				m = "0" + m;
+			}
+
+			if (s >= 0 && s <= 9) {
+				s = "0" + s;
+			}
+			d.innerHTML = year + '-' + mon + '-' + da;
+
+			var audio1 = document.getElementById('music1');
+			var audio2 = document.getElementById('music2');
+			audio1.pause();//打开页面时无音乐
+			audio2.pause();//打开页面时无音乐
+		}
+		function play1() {
+			var audio1 = document.getElementById('music1');
+			var audio2 = document.getElementById('music2');
+			if(audio2.play){
+				audio2.pause();
+				audio1.play();
+			}else if(audio1.play){
+				audio1.pause();
+			}else{
+				audio1.play();
+			}
+		}
+		function play2() {
+			var audio1 = document.getElementById('music1');
+			var audio2 = document.getElementById('music2');
+			if(audio1.play){
+				audio1.pause();
+				audio2.play();
+			}else if(audio2.play){
+				audio2.pause();
+			}else{
+				audio2.play();
+			}
+		}
+		function popup() {
+			document.getElementById("EleId").style.display="inline";
+		}
+		function close1() {
+			document.getElementById("EleId").style.display="none";
+			// var set_reset = setInterval("fn1()",1000);
+
+			var audio1 = document.getElementById('music1');
+			var audio2 = document.getElementById('music2');
+			if(audio1.play){
+				audio1.play();
+				audio2.pause();
+			}else if(audio2.play){
+				audio2.play();
+				audio1.pause();
+			}else{
+				audio1.play();
+			}
+		}
+
+
+		var t;
+		var Minute;
+		var Second;
+		var d;
+		function ok() {
+			document.getElementById("EleId").style.display="none";
+			var audio1 = document.getElementById('music1');
+			var audio2 = document.getElementById('music2');
+			if(audio1.play){
+				audio1.play();
+				audio2.pause();
+			}else if(audio2.play){
+				audio2.play();
+				audio1.pause();
+			}else{
+				audio1.play();
+			}
+
+			if ($("#Minute").val() == "0" || $("#Minute").val() == "") {
+				Minute = 0;
+			} else {
+				Minute = $("#Minute").val();
+			}
+			if ($("#Second").val() == "0" || $("#Second").val() == "") {
+				Second = 0;
+			} else {
+				Second = $("#Second").val();
+			}
+			var min = "";
+			if (Minute < 10) {
+				min = "0" + Minute;
+			} else {
+				min = Minute + "";
+			}
+			var sec = "";
+			if (Second < 10) {
+				sec = "0" + Second;
+			} else {
+				sec = Second + "";
+			}
+			$("#show").text(min + ":" + sec);
+			$(".page-header").hide();
+			$("#show").show();
+			setTimeout(function () {
+				begin()
+			}, 1000);
+		}
+		function begin() {
+			if (Second != 0) {
+				Second--;
+				min = "";
+				if (Minute < 10) {
+					min = "0" + Minute;
+				} else {
+					min = Minute + "";
+				}
+				sec = "";
+				if (Second < 10) {
+					sec = "0" + Second;
+				} else {
+					sec = Second + "";
+				}
+				$("#show").text(min + ":" + sec);
+			} else {
+				if (Minute > 0) {
+					Minute--;
+					Second = 59;
+					min = "";
+					if (Minute < 10) {
+						min = "0" + Minute;
+					} else {
+						min = Minute + "";
+					}
+					sec = "";
+					if (Second < 10) {
+						sec = "0" + Second;
+					} else {
+						sec = Second + "";
+					}
+					$("#show").text(min + ":" + sec);
+				} else {
+					clearTimeout(t);
+
+					var audio1 = document.getElementById('music1');
+					var audio2 = document.getElementById('music2');
+					if(audio1.play){
+						audio1.pause();
+					}else if(audio2.play){
+						audio2.pause();
+					}else{
+						audio1.pause();
+						audio2.pause();
+					}
+
+
+					var date = new Date();
+					var year = date.getFullYear(); //获取当前年份
+					var mon = date.getMonth() + 1; //获取当前月份
+					var da = date.getDate(); //获取当前日
+					var day = date.getDay(); //获取当前星期几
+					var h = date.getHours(); //获取小时
+					var m = date.getMinutes(); //获取分钟
+					var s = date.getSeconds(); //获取秒
+					var d = document.getElementById('show');
+					//判断当数字小于等于9时 显示 01 02 ----- 08 09
+					if (mon >= 1 && mon <= 9) {
+						mon = "0" + mon;
+					}
+					if (da >= 0 && da <= 9) {
+						da = "0" + da;
+					}
+					if (h >= 0 && h <= 9) {
+						h = "0" + h;
+					}
+
+					if (m >= 0 && m <= 9) {
+						m = "0" + m;
+					}
+
+					if (s >= 0 && s <= 9) {
+						s = "0" + s;
+					}
+					d.innerHTML = year + '-' + mon + '-' + da;
+				}
+			}
+			t = setTimeout(function () {
+				begin()
+			}, 1000)
+		}
+	</script>
+</html>
