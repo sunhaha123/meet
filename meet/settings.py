@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Meet.urls'
+ROOT_URLCONF = 'meet.urls'
 
 TEMPLATES = [
     {

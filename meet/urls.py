@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import  include, url
 from django.contrib import admin
 from index.views import IndexView
-from Meet.settings import MEDIA_ROOT
+from meet.settings import MEDIA_ROOT
 from django.views.static import serve
 
 
