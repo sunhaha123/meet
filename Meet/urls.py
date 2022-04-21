@@ -15,14 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import  include, url
 from django.contrib import admin
-from index.views import IndexView, IndexView2
+from index.views import IndexView
 from Meet.settings import MEDIA_ROOT
 from django.views.static import serve
 
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^lda/', IndexView2.as_view(),name="index2"),
     url(r'^$', IndexView.as_view(),name="index"),
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 ]
