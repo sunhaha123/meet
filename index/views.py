@@ -11,3 +11,10 @@ class IndexView(View):
     """
     def get(self, request):
         return render(request, "index.html", )
+
+class IndexView2(View):
+    """
+    首页index
+    """
+    def get(self, request):
+        return render(request, "result.html", )
