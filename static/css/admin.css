@@ -1,0 +1,48 @@
+.m-home {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+}
+.m-home .bg {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: block;
+}
+.m-home .bg img {
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.m-home .bg:hover,
+.m-home .bg:hover img {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.m-home .bg:hover img {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+.m-home .bg img {
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
+.m-home h1 {
+  line-height: 5;
+}
+.m-home .btn {
+  padding: 12px 0;
+}
+.m-home .btn img {
+  width: 35px;
+  margin: 0 15px;
+}
+.m-home audio {
+  display: none;
+}
