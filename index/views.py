@@ -7,7 +7,14 @@ from  django.views.generic.base import View
 
 class IndexView(View):
     """
-    首页
+    首页index
     """
     def get(self, request):
-        return render(request, "music.html", )
+        return render(request, "index.html", )
+
+class IndexView2(View):
+    """
+    首页index2
+    """
+    def get(self, request):
+        return render(request, "result.html", )
