@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39baf7ab-4549-40b0-a269-3f754b40b6dd" name="Changes" comment="core-head">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/meet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/meet/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650543634686</updated>
-      <workItem from="1650543635971" duration="1432000" />
+      <workItem from="1650543635971" duration="1739000" />
     </task>
     <task id="LOCAL-00006" summary="core-head">
       <created>1650544651226</created>
@@ -109,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650544651226</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="core-head">
+      <created>1650545264592</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1650545264592</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

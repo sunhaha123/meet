@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import sys
+import corsheaders
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'index',
-    'corsheaders'
+    'corsheaders',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -83,6 +84,7 @@ CORS_ALLOW_HEADERS = (
  'x-csrftoken',
  'x-requested-with',
  'Pragma',
+ 'content-type',
 )
 #部署到云服务上必备
 ALLOWED_HOSTS = ['*']
