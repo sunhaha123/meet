@@ -58,9 +58,8 @@ MIDDLEWARE_CLASSES = [
 # 跨域增加忽略
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ORIGIN_WHITELIST = (
-    '*'
-)
+CORS_ORIGIN_WHITELIST = ()
+
 CORS_ALLOW_METHODS = (
     'DELETE',
     'GET',
@@ -70,17 +69,20 @@ CORS_ALLOW_METHODS = (
     'PUT',
     'VIEW',
 )
+
+# 允许的请求头
 CORS_ALLOW_HEADERS = (
-    'XMLHttpRequest',
-    'X_FILENAME',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'dnt',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
+ 'XMLHttpRequest',
+ 'X_FILENAME',
+ 'accept-encoding',
+ 'authorization',
+ 'content-type',
+ 'dnt',
+ 'origin',
+ 'user-agent',
+ 'x-csrftoken',
+ 'x-requested-with',
+ 'Pragma',
 )
 #部署到云服务上必备
 ALLOWED_HOSTS = ['*']
