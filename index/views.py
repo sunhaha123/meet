@@ -14,7 +14,7 @@ class IndexView(View):
 
 class IndexView2(View):
     """
-    首页index2
+    首页index
     """
     def get(self, request):
         return render(request, "result.html", )

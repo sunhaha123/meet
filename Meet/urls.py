@@ -22,7 +22,7 @@ from django.views.static import serve
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', IndexView.as_view(),name="index"),
     url(r'^lda/', IndexView2.as_view(),name="index2"),
+    url(r'^$', IndexView.as_view(),name="index"),
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 ]
