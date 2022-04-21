@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32c292ef-2212-432d-b590-f1898b0879ee" name="Changes" comment="lda">
-      <change beforePath="$PROJECT_DIR$/.idea/Meet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Meet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Meet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Meet/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/music/我们的天空.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/music/留下句号的面容.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/jquery-3.1.1.min.js" beforeDir="false" />
+    <list default="true" id="32c292ef-2212-432d-b590-f1898b0879ee" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/media/music/周深 _ 胡夏 - 天涯尽处.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/music.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/music.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +14,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/music" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\1code\Meet\media\music" />
+      <recent name="G:\1code\Meet\templates" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType">
@@ -86,6 +85,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Meet.settings" />
       </envs>
       <option name="SDK_HOME" value="E:\.env\django\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -221,9 +221,30 @@
     </configuration>
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="1">
+      <created>1650541971444</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650541971444</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>
